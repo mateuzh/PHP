@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <meta charset="UTF-8"> <!-- Atributo "charset" define em qual a linguagem da página está-->
+        <title> Exemplo de css e tabelas </title>
+    </head>
+    <body>
+        <table style="border: 1px solid; "> <!-- Início da tabela -->
+            <tr><!-- Início da Linha-->
+                <td rowspan="2"><!-- Início da coluna -->
+                    Minha tabela
+                </td>
+                <td>Coluna 2</td>
+                <td>Coluna 3</td> 
+                <td>Coluna 4</td>
+            </tr> <!-- Fim da Linha-->
+            <tr><!-- Nova Linha-->
+                <td colspan="0"> Coluna 1 x 2 </td>
+                <td colspan="2"> Coluna 1 x 2</td>
+                
+            </tr>
+        </table><!-- Fim da tabela-->
+    </body>
+
+</html>
