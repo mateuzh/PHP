@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="UTF-8"> <!-- Atributo "charset" define em qual a linguagem da página está-->
+        <title> Exemplo de css e tabelas </title>
+    </head>
+    <body>
+        <table style="border: 1px solid; "> <!-- Início da tabela -->
+            <tr ><!-- Início da Linha-->
+                <td rowspan="2"><!-- Início da coluna -->
+                    Minha tabela
+                </td>
+                <td>Coluna 2</td>
+                <td>Coluna 3</td> 
+                <td>Coluna 4</td>
+            </tr> <!-- Fim da Linha-->
+            <tr><!-- Nova Linha-->
+                <td colspan="0"> Coluna 1 x 2 </td>
+                <td colspan="2"> Coluna 1 x 2</td>
+                
+            </tr>
+        </table><!-- Fim da tabela-->
+    
+    <br>
+    <form>
+        <label> Nome: </label>
+        <input type="text" value="Mateus"disabled> <!--Disabled: Não deixa alterar o texto dentro do campo-->
+        <br>
+        Sobrenome:
+        <input type="text" placeholder="Insira seu Sobrenome" > 
+        <br>
+        <input type="button" value="salvar">
+        
+        <input type="reset" value="reset"> 
+        <input type="submit" value="Enviar"> <!--Submit: Envia formulários, função já vem pré-estabelecida-->
+    </form>
+
+    <?php
+    echo "<br> texto com echo <br>";
+    print "Hello, wolrd! Olá mundo!<br>";   
+
+    $var = "texto da variável<br>";
+    echo $var;
+    print $var;
+
+    $var2 = print "print atribuído a variável<br>";
+    echo $var2;
+
+    echo $var2."<hr>";
+
+    $var3 = "2.5 . texto 5";
+    //echo gettype($var3);
+
+    $a = 5;
+    $b = 10;
+
+    echo "<hr>"; //Imprime HR
+
+    echo $a * (int)$var3;
+    echo "<br>";
+
+    $array = array(
+        "nome" => "Pedro",
+        "idade" => "28",
+        "telefone" => "98765-4321");
+
+    print_r ($array);
+    var_dump ($array);
+
+    ?>
+
+    </body>
+</html>
