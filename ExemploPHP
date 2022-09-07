@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang= "pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Aula de PHP </title>
+
+</head>
+<body>
+<h1> Estruturas condicionais e de laço </h1>
+<a href="?pagina=home"> Home </a>
+<a href="?pagina=exemplo"> Exemplo </a>
+
+<?php
+
+if (isset($_GET["pagina"]))
+{
+    echo $_GET["pagina"];
+    require ("./exemplo.php");
+}
+
+
+/* require ("./exemplo.php"); /*Incluir um arquivo, usar em casos de incluir um documento muito importante*/
+
+$var = 10;
+$var2 = 50;
+
+if ($var < $var2){
+    echo "var é maior que var2<br>";
+    if ($var === 10){ // === Compara se é igual, e compara se o tipo é igual
+        echo "var é igual a 10";
+    }
+}elseif($var2 == 50){
+    echo "var2 é 50<br>";
+}else{
+    echo "tente outra vez<br>";
+}
+
+echo "<hr>";
+
+$i = 0;
+while ($i < 10){ /* Só ira executar se a verificação inicial for verdadeira */
+    $i++;
+    echo "$i ";
+}
+echo "<br>";
+$i = 0;
+
+do{
+    $i++; /* Soma +1 à variável */
+    echo "$i "; 
+}while($i < 10); /* Laço de repetição, executa primeiro e depois faz a verificação */ 
+
+echo "<hr>";
+$j = 10;
+for ( $i = 1 ; $j > 0 ;  $i++){ /* Laço de repetição com condicionais personalizadas */
+    echo "$j ";
+    echo "$i ";
+    $j --; /* -- Soma -1 à variável */
+}
+
+echo "<hr>";
+$var = "exemplo";
+switch ($var){
+    case "home":
+        echo "Página Home";
+    break;
+    case "exemplo":
+        echo "Página Exemplo";
+    break;
+    default:
+        echo "Nenhum dos casos";
+    break;
+}
+
+include ("./exemplo.php"); /*Incluir um arquivo, inclui um documento que não seja tão essencial assim*/
+
+?>
+</body>
+</html>
