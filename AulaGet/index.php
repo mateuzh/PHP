@@ -3,7 +3,7 @@
 <head>
     <meta charset = "UTF-8">
     <title> Este é o título! </title>
-    <a> Este é o header </a>
+
 </head>
 <body>
     <br><br>
@@ -12,9 +12,11 @@
     <a href="?contato=contato"> Contato </a>
     <br><br>
 <?php
-$contador=0;
+$contador=0; //Inicializa a variavel
 
-if (isset($_GET["home"]))
+require ("./header.php");
+
+if (isset($_GET["home"]))//
 {   
     include ("./home.php");
     echo "<br><br>";
@@ -23,7 +25,7 @@ if (isset($_GET["home"]))
         echo "$contador ";
     }
 }
-if (isset($_GET["sobre"]))
+else if (isset($_GET["sobre"]))
 {
     include ("./sobre.php");
     echo "<br><br>";
@@ -33,17 +35,25 @@ if (isset($_GET["sobre"]))
         echo "$contador ";
     }
 }
-if (isset($_GET["contato"]))
+else if (isset($_GET["contato"]))
 {
     include ("./contato.php");
     echo "<br><br>";
     echo "Sem contador aqui! ";
     
 }
+else 
+{
+    require("./erro.php");
+}
+
+
+require ("./rodape.php");
+
 ?>
 <br><br>
 
-<a> Este é o rodapé! </a>
+
 
 
 </body>
