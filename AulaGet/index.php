@@ -12,49 +12,39 @@
     <a href="?contato=contato"> Contato </a>
     <br><br>
 <?php
-$contador=0; //Inicializa a variavel
 
 require ("./header.php");
 
-if (isset($_GET["home"]))//
+if (isset($_GET["home"]))
 {   
+    $page = $_GET["home"];
     include ("./home.php");
     echo "<br><br>";
-    while ($contador < 10) {
-        $contador++;
-        echo "$contador ";
-    }
+}else{
+    $page = $_GET["home"];
+    include("./home.php");
 }
-else if (isset($_GET["sobre"]))
-{
-    include ("./sobre.php");
-    echo "<br><br>";
-    $contador = 10;
-    while ($contador > 0) {
-        $contador--;
-        echo "$contador ";
-    }
+
+switch ($page) {
+    case 'sobre':
+        include("./sobre.php");
+        break;
+    case 'contato':
+        include("./contato.php");
+        break;
+    default:
+        include("./erro.php");
+        break;
 }
-else if (isset($_GET["contato"]))
-{
-    include ("./contato.php");
-    echo "<br><br>";
-    echo "Sem contador aqui! ";
-    
-}
-else 
-{
-    require("./erro.php");
-}
+
+
+
 
 
 require ("./rodape.php");
-
 ?>
+
 <br><br>
-
-
-
 
 </body>
 </html>
