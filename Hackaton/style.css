@@ -1,0 +1,25 @@
+body{
+    
+    min-height: 100%;
+    background-image: url(./imagens/portaprincipal.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+}
+
+.fachadas{
+    width: 600px;     
+    margin-left: 65%;    
+    margin-right: auto; 
+    margin-top: -25%;
+    border: 8px floralwhite;
+}
+
+#logo{
+    width: 500px;     
+    margin-left: 10%;    
+    margin-right: auto; 
+    margin-top: 20%;
+}
+
